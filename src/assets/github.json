@@ -1,0 +1,113 @@
+[
+  {
+    "id": 1,
+    "title": "E-Commerce Website",
+    "description":
+      "A modern ecommerce UI with cart system, product filters and responsive design.",
+    "image":
+      "https://images.unsplash.com/photo-1557821552-17105176677c",
+    "tags": ["React", "Tailwind", "API"],
+    "github": "https://github.com/tanveerahmed9413",
+    "live": "https://tanveerahmed9413.github.io/firstportfolio/"
+  },
+  {
+    "id": 2,
+    "title": "Notes App",
+    "description":
+      "Create, delete and save notes using LocalStorage with a clean UI.",
+    "image":
+      "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b",
+    "tags": ["JavaScript", "LocalStorage", "CSS"],
+    "github": "https://github.com/tanveerahmed9413",
+    "live": "https://example.com"
+  },
+  {
+    "id": 3,
+    "title": "Weather App",
+    "description":
+      "Weather forecast app using API with dynamic city search.",
+    "image":
+      "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b",
+    "tags": ["API", "JavaScript", "UI"],
+    "github": "https://github.com/tanveerahmed9413",
+    "live": "https://example.com"
+  },
+  {
+    "id": 4,
+    "title": "Task Manager",
+    "description":
+      "Track daily tasks with status filters and progress UI.",
+    "image":
+      "https://images.unsplash.com/photo-1487014679447-9f8336841d58",
+    "tags": ["React", "CRUD", "Tailwind"],
+    "github": "https://github.com/tanveerahmed9413",
+    "live": "https://example.com"
+  },
+  {
+    "id": 5,
+    "title": "Portfolio Website",
+    "description":
+      "Personal portfolio showcasing projects, skills and contact form.",
+    "image":
+      "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
+    "tags": ["Portfolio", "Responsive", "UI"],
+    "github": "https://github.com/tanveerahmed9413",
+    "live": "https://tanveerahmed9413.github.io/firstportfolio/"
+  },
+  {
+    "id": 6,
+    "title": "Chat Application",
+    "description":
+      "Real time chat UI with modern messaging interface.",
+    "image":
+      "https://images.unsplash.com/photo-1525182008055-f88b95ff7980",
+    "tags": ["Socket", "React", "Node"],
+    "github": "https://github.com/tanveerahmed9413",
+    "live": "https://example.com"
+  },
+  {
+    "id": 7,
+    "title": "Music Player",
+    "description":
+      "A stylish web music player with playlist support.",
+    "image":
+      "https://images.unsplash.com/photo-1511379938547-c1f69419868d",
+    "tags": ["Audio", "JavaScript", "UI"],
+    "github": "https://github.com/tanveerahmed9413",
+    "live": "https://example.com"
+  },
+  {
+    "id": 8,
+    "title": "Dashboard UI",
+    "description":
+      "Admin dashboard with charts, cards and analytics widgets.",
+    "image":
+      "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
+    "tags": ["Dashboard", "Charts", "Tailwind"],
+    "github": "https://github.com/tanveerahmed9413",
+    "live": "https://example.com"
+  },
+  {
+    "id": 9,
+    "title": "Blog Platform",
+    "description":
+      "Minimal blog platform UI with post cards and categories.",
+    "image":
+      "https://images.unsplash.com/photo-1499750310107-5fef28a66643",
+    "tags": ["Blog", "React", "Design"],
+    "github": "https://github.com/tanveerahmed9413",
+    "live": "https://example.com"
+  },
+  {
+    "id": 10,
+    "title": "File Upload System",
+    "description":
+      "Upload and manage files like pdf, images and documents.",
+    "image":
+      "https://images.unsplash.com/photo-1587614382346-4ec70e388b28",
+    "tags": ["Upload", "Backend", "Node"],
+    "github": "https://github.com/tanveerahmed9413",
+    "live": "https://example.com"
+  }
+]
+
