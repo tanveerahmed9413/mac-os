@@ -1,0 +1,16 @@
+import MacWindows from "./MacWindows";
+
+const Calendar = ({ onClose }) => {
+  return (
+    <MacWindows height={400} width={400}>
+      <div className="h-full w-full">
+        <iframe
+          src="https://calendar.google.com/calendar/embed?src=en.indian%23holiday%40group.v.calendar.google.com&ctz=Asia%2FKolkata"
+          className="w-full h-full rounded-xl"
+        ></iframe>
+      </div>
+    </MacWindows>
+  );
+};
+
+export default Calendar;

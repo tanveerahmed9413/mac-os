@@ -8,48 +8,56 @@ import pdf_file from "../images/pdf_file.svg";
 import spotify from "../images/spotify.svg";
 import { useState } from "react";
 
-const Dock = () => {
+const Dock = ({openWindow }) => {
   const [hovered, sethovered] = useState(null);
   const icons = [
     {
       name: "GitHub",
       icon: github,
       color: "#181717",
+      id: "github",
     },
     {
       name: "Calendar",
       icon: calender,
       color: "#FF3B30",
+      id: "calendar",
     },
     {
       name: "CLI",
       icon: cli,
       color: "#1C1C1E",
+      id: "cli",
     },
     {
       name: "Links",
       icon: link,
       color: "#0A84FF",
+      id: "links",
     },
     {
       name: "Mail",
       icon: mail,
       color: "#007AFF",
+      id: "mail",
     },
     {
       name: "Notes",
       icon: note,
       color: "#FFCC00",
+      id: "note",
     },
     {
       name: "PDF",
       icon: pdf_file,
       color: "#FF3B30",
+      id: "pdf",
     },
     {
       name: "Spotify",
       icon: spotify,
       color: "#1DB954",
+      id: "spotify",
     },
   ];
 
@@ -62,36 +70,35 @@ const Dock = () => {
       rounded-2xl shadow-lg"
       >
         {icons.map((icon, idx) => {
-  let scale = 1;
-  let x = 0;
+          let scale = 1;
+          let x = 0;
 
-  if (hovered === idx) {
-    scale = 1.4;
-  } 
-  else if (hovered === idx - 1) {
-    scale = 1.2;
-    x = -10;
-  } 
-  else if (hovered === idx + 1) {
-    scale = 1.2;
-    x = 10;
-  }
+          if (hovered === idx) {
+            scale = 1.4;
+          } else if (hovered === idx - 1) {
+            scale = 1.2;
+            x = -10;
+          } else if (hovered === idx + 1) {
+            scale = 1.2;
+            x = 10;
+          }
 
-  return (
-    <img
-      key={idx}
-      src={icon.icon}
-      alt={icon.name}
-      onMouseEnter={() => sethovered(idx)}
-      onMouseLeave={() => sethovered(null)}
-      style={{
-        transform: `translateX(${x}px) scale(${scale})`,
-        background: `${icon.color}`
-      }}
-      className="w-12 h-12 p-2 rounded-xl transition-all duration-300 ease-out cursor-pointer"
-    />
-  );
-})}
+          return (
+            <img
+              key={idx}
+              src={icon.icon}
+              alt={icon.name}
+              onMouseEnter={() => sethovered(idx)}
+              onMouseLeave={() => sethovered(null)}
+              onClick={() => openWindow(icon.id)}
+              style={{
+                transform: `translateX(${x}px) scale(${scale})`,
+                background: `${icon.color}`,
+              }}
+              className="w-12 h-12 p-2 rounded-xl transition-all duration-300 ease-out cursor-pointer"
+            />
+          );
+        })}
       </div>
     </div>
   );

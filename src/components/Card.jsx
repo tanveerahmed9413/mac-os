@@ -3,7 +3,7 @@ import React from "react";
 const Card = ({user}) => {
     // console.log(user.title)
   return (
-    <div className="max-w-sm bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300">
+    <div className="max-w-sm  bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300">
       
       {/* Image */}
       <div className="h-48 w-full overflow-hidden">

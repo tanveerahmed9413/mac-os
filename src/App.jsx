@@ -1,6 +1,12 @@
 import Dock from "./components/Dock";
 import Nav from "./components/Nav";
 import Github from "./components/windows/Github";
+import Note from "./components/windows/Note";
+import Resume from "./components/windows/Resume";
+import Spotify from "./components/windows/Spotify";
+import OpenWindow from "../src/components/OpenWindow"
+import Calendar from "./components/windows/Calender";
+import Terminal from "./components/windows/Terminal";
 
 const App = () => {
   return (
@@ -8,9 +14,14 @@ const App = () => {
     bg-[url('https://plus.unsplash.com/premium_photo-1701187734469-b82153116e43?q=80&w=871&auto=format&fit=crop')]">
 
       <Nav />
-      <Github />
       <Dock />
-
+      <Github />
+      <Note />
+      <Resume />
+      <Spotify />
+      <Calendar />
+       {/* <OpenWindow />; */}
+       <Terminal />
     </div>
   );
 };
