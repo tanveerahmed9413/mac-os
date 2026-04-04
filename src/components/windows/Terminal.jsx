@@ -5,9 +5,27 @@ import { ReactTerminal } from "react-terminal";
 const Terminal = () => {
   const commands = {
     whoami: "tanveer",
+
+    about: () =>
+      "Hi, I'm Tanveer Ahmed 👋\nBCA Student | Full Stack Developer\nI love building real-world web apps.",
+
+    skills: () =>
+      "Skills:\n- HTML, CSS, JavaScript\n- React.js\n- Node.js, Express\n- MongoDB\n- Tailwind CSS",
+
+    projects: () =>
+      "Projects:\n1. E-commerce Website\n2. Notes App (LocalStorage)\n3. Bubble Game (Firebase + Leaderboard)\n4. Portfolio Website",
+
+    experience: () =>
+      "Experience:\n- Built multiple frontend projects\n- Worked with APIs (fetch)\n- Backend with Node.js & MongoDB\n- Currently improving full stack skills",
+
+    contact: () =>
+      "Contact Me:\nEmail: tanveerahmed4872@gmail.com\nGitHub: github.com/tanveerahmed9413\nLinkedIn: linkedin.com/in/tanveerahmed9413",
+
     echo: (...args) => args.join(" "),
     cd: (dir) => `changed to ${dir}`,
-    myhelp: () => "Commands: echo, whoami, cd",
+
+    help: () =>
+      "Commands:\nabout,\nskills,\nprojects,\nexperience,\ncontact,\nwhoami,\necho,",
   };
 
   return (
@@ -16,7 +34,21 @@ const Terminal = () => {
         <ReactTerminal
           commands={commands}
           theme="dark"
-          welcomeMessage={"Welcome to the terminal 🚀 "}
+          welcomeMessage={`Welcome to My Portfolio CLI 🚀
+
+Hey there! Welcome to my interactive terminal portfolio.
+
+You can explore:
+- about       → Learn about me \n
+- skills      → View my technical skills \n
+- projects    → Check out my work \n
+- experience  → See my journey \n
+- contact     → Get in touch \n
+
+Type "help" to see all available commands.
+
+Happy exploring! 💻`}
+          prompt={"tanveerahmed:~$ "}
           showControlBar={false}
           showControlButtons={false}
         />
