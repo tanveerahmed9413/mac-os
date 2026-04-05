@@ -21,7 +21,6 @@ const Resume = ({ setwindowState , activeWindow, setActiveWindow}) => {
         <iframe
           className="h-full w-full"
           src="/TanveerAhmed.pdf"
-          frameBorder="0"
         >
           
         </iframe>
