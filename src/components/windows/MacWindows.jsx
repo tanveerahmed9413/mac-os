@@ -1,7 +1,7 @@
 import React from "react";
 import { Rnd } from "react-rnd";
 
-const MacWindows = ({ children, width = 800, height = 500 }) => {
+const MacWindows = ({ children, width = 800, height = 500, onClose }) => {
   return (
     <Rnd
       default={{
@@ -21,9 +21,9 @@ const MacWindows = ({ children, width = 800, height = 500 }) => {
         {/* Header */}
         <div className="window-header flex items-center gap-3 px-3 py-2 bg-zinc-900 cursor-move select-none">
           <div className="flex gap-2">
-            <div className="bg-red-500 rounded-full h-3 w-3"></div>
-            <div className="bg-yellow-400 rounded-full h-3 w-3"></div>
-            <div className="bg-green-500 rounded-full h-3 w-3"></div>
+            <div onClick={onClose} className="bg-red-500 rounded-full h-3 w-3 transition hover:scale-110 cursor-default"></div>
+            <div className="bg-yellow-400 rounded-full h-3 w-3 transition hover:scale-110 cursor-default"></div>
+            <div className="bg-green-500 rounded-full h-3 w-3 transition hover:scale-110 cursor-default"></div>
           </div>
 
           <p className="text-white text-sm font-medium">

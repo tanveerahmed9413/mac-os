@@ -1,9 +1,16 @@
 import React from "react";
 import MacWindows from "./MacWindows";
-MacWindows
-const Resume = () => {
+
+
+
+const Resume = ({setwindowState}) => {
   return (
-    <MacWindows height={500} width={650}>
+    <MacWindows height={500} width={650} onClose={() =>
+        setwindowState((prev) => ({
+          ...prev,
+          Resume: false,
+        }))
+      }> 
       <div className="h-screen w-''screen''">
         {" "}
         <iframe

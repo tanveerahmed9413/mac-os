@@ -1,54 +1,55 @@
-import React, { useEffect, useEffectEvent, useState } from 'react'
-import apple from "../assets/apple.svg"
-import wifi from "../assets/wifi.svg"
+import React, { useEffect, useState } from "react";
+import apple from "../assets/apple.svg";
+import wifi from "../assets/wifi.svg";
 
 const Nav = () => {
-    const [time, settime] = useState(new Date())
+  const [time, setTime] = useState(new Date());
 
-     useEffect(()=>{
-        let interval  = setInterval(() => {
-            settime(new Date())
-        }, 1000);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setTime(new Date());
+    }, 1000);
 
-        return ()=> clearInterval(interval)
-     },[])
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    <div>
-      <nav className='flex justify-between px-2 items-center gap-2.5 font-semibold   bg-gray-400'>
-        <div className="left flex gap-2.5 items-center   py-2 ">
-            <div className="apple-icon h-8 w-8 ">
-                <img src={apple} alt="" className='h-8 w-8'  />
-            </div>
-            <div className="nav-item  font-black cursor-pointer">
-                <p>Tanveer Ahmed</p>
-            </div>
-            <div className="nav-item cursor-pointer">
-                <p>file</p>
-            </div>
-            <div className="nav-item cursor-pointer">
-                <p>windows</p>
-            </div>
-            <div className="nav-item cursor-pointer">
-                <p>Terminal</p>
-            </div>
-        </div>
-        <div className="right flex gap-2.5 items-center">
-            <div className="wifi h-6 w-6">
-                <img src={wifi} alt="" className='h-6 w-6' />
-            </div>
-            <div className="date-time flex gap-2 items-center">
-            
-                    <>
-                    <div className="date">{time.getDay()+1}/{time.getMonth()+1}/{time.getFullYear()}</div>
-                    <div className="time">{time.toLocaleTimeString()}</div>
-                    </>
-                    
-                
-            </div>
-        </div>
-      </nav>
-    </div>
-  )
-}
+    <nav className="fixed top-0 left-0 w-full z-50 
+    flex justify-between items-center px-4 py-1 
+    bg-white/10 backdrop-blur-md border-b border-white/20 text-white text-sm">
 
-export default Nav
+      {/* LEFT */}
+      <div className="flex items-center gap-4">
+        <img src={apple} alt="apple" className="h-5 w-5" />
+
+        <p className="font-semibold cursor-pointer hover:text-gray-300">
+          Tanveer Ahmed
+        </p>
+
+        <p className="cursor-pointer hover:text-gray-300">File</p>
+        <p className="cursor-pointer hover:text-gray-300">Window</p>
+        <p className="cursor-pointer hover:text-gray-300">Terminal</p>
+      </div>
+
+      {/* RIGHT */}
+      <div className="flex items-center gap-4">
+        <img src={wifi} alt="wifi" className="h-4 w-4" />
+
+        <div className="flex items-center gap-2">
+          <span>
+            {time.getDate()}/{time.getMonth() + 1}/{time.getFullYear()}
+          </span>
+          <span>
+            {time.toLocaleTimeString([], {
+              hour: "2-digit",
+              minute: "2-digit",
+              second: '2-digit'
+            })}
+          </span>
+        </div>
+      </div>
+    </nav>
+  );
+};
+
+export default Nav;

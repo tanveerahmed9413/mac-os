@@ -1,26 +1,35 @@
-import React from 'react'
-import MacWindows from './MacWindows'
-import githubData from '../../assets/github.json'
-import Card from '../Card'
+import React from "react";
+import MacWindows from "./MacWindows";
+import githubData from "../../assets/github.json";
+import Card from "../Card";
 
-const Github = () => {
-  // console.log(githubData);
-  
+const Github = ({setwindowState}) => {
   return (
-    <div>
-      <MacWindows>
-        {
-            githubData.map((user,idx)=>{
-                return <Card user={user} key={idx} />
-                
-                
-            })
-            
-            
-        }
-      </MacWindows>
-    </div>
-  )
-}
+   <MacWindows
+      height={500}
+      width={750}
+      onClose={() =>
+        setwindowState((prev) => ({
+          ...prev,
+          Github: false,
+        }))
+      }
+    >
+      <div className="w-full h-full overflow-y-auto p-4">
+        
+        <h1 className="text-black text-xl font-semibold mb-4">
+          GitHub Projects 🚀
+        </h1>
 
-export default Github
+        <div className="grid grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-4">
+          {githubData.map((user, idx) => {
+            return <Card user={user} key={user.id} />
+          })}
+        </div>
+
+      </div>
+    </MacWindows>
+  );
+};
+
+export default Github;

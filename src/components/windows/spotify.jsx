@@ -1,10 +1,15 @@
 import React from "react";
 import MacWindows from "./MacWindows";
 
-const Spotify = () => {
+const Spotify = ({setwindowState}) => {
   return (
     <div>
-      <MacWindows width={600} height={500}>
+      <MacWindows width={600} height={500} onClose={() =>
+        setwindowState((prev) => ({
+          ...prev,
+          Spotify: false,
+        }))
+      }>
         <div className="h-full w-full">
           <iframe
             className="w-full h-full"
