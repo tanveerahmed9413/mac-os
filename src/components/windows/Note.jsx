@@ -3,9 +3,7 @@ import MacWindows from "./MacWindows";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { atelierDuneDark } from "react-syntax-highlighter/dist/esm/styles/hljs";
 
-
-
-const Note = ({setwindowState}) => {
+const Note = ({ setwindowState, activeWindow, setActiveWindow }) => {
   const [markDown, setmarkDown] = useState(null);
   useEffect(() => {
     fetch("/note.txt")
@@ -14,12 +12,18 @@ const Note = ({setwindowState}) => {
   }, []);
 
   return (
-    <MacWindows height={450} onClose={() =>
+    <MacWindows
+      height={450}
+      id="Note"
+      activeWindow={activeWindow}
+      setActiveWindow={setActiveWindow}
+      onClose={() =>
         setwindowState((prev) => ({
           ...prev,
           Note: false,
         }))
-      }>
+      }
+    >
       {" "}
       <div className="note_window">
         {markDown ? (

@@ -9,7 +9,8 @@ import Terminal from "./components/windows/Terminal";
 import { useState } from "react";
 
 const App = () => {
-
+  
+  const [activeWindow, setActiveWindow] = useState(null)
   const [windowState, setwindowState] = useState({
     Github: false,
     Note: false,
@@ -25,14 +26,13 @@ const App = () => {
     bg-[url('https://plus.unsplash.com/premium_photo-1701187734469-b82153116e43?q=80&w=871&auto=format&fit=crop')]">
 
       <Nav />
-      <Dock windowState={windowState} setwindowState={setwindowState} />
-
-      {windowState.Github && <Github setwindowState={setwindowState}/>}
-      {windowState.Note && <Note setwindowState={setwindowState}/>}
-      {windowState.Resume && <Resume setwindowState={setwindowState}/>}
-      {windowState.Spotify && <Spotify setwindowState={setwindowState}/>}
-      {windowState.Calender && <Calendar setwindowState={setwindowState}/>}
-      {windowState.Terminal && <Terminal setwindowState={setwindowState}/>}
+      <Dock windowState={windowState} setwindowState={setwindowState}  activeWindow={activeWindow} setActiveWindow={setActiveWindow}/>
+      {windowState.Github && <Github setwindowState={setwindowState}  activeWindow={activeWindow} setActiveWindow={setActiveWindow}/>}
+      {windowState.Note && <Note setwindowState={setwindowState} activeWindow={activeWindow} setActiveWindow={setActiveWindow}/>}
+      {windowState.Resume && <Resume setwindowState={setwindowState} activeWindow={activeWindow} setActiveWindow={setActiveWindow}/>}
+      {windowState.Spotify && <Spotify setwindowState={setwindowState} activeWindow={activeWindow} setActiveWindow={setActiveWindow}/>}
+      {windowState.Calender && <Calendar setwindowState={setwindowState} activeWindow={activeWindow} setActiveWindow={setActiveWindow}/>}
+      {windowState.Terminal && <Terminal setwindowState={setwindowState} activeWindow={activeWindow} setActiveWindow={setActiveWindow}/>}
     </div>
   );
 };

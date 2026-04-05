@@ -2,7 +2,7 @@ import React from "react";
 import MacWindows from "./MacWindows";
 import { ReactTerminal } from "react-terminal";
 
-const Terminal = ({setwindowState}) => {
+const Terminal = ({ setwindowState, activeWindow, setActiveWindow }) => {
   const commands = {
     whoami: "tanveer",
 
@@ -29,12 +29,19 @@ const Terminal = ({setwindowState}) => {
   };
 
   return (
-    <MacWindows height={400} width={600} onClose={() =>
+    <MacWindows
+      height={400}
+      width={600}
+      id="Terminal"
+      activeWindow={activeWindow}
+      setActiveWindow={setActiveWindow}
+      onClose={() =>
         setwindowState((prev) => ({
           ...prev,
           Terminal: false,
         }))
-      }>
+      }
+    >
       <div className="w-[550px] h-[300px]">
         <ReactTerminal
           commands={commands}
