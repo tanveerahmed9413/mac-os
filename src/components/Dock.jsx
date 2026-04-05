@@ -12,7 +12,7 @@ const Dock = ({ windowState, setwindowState }) => {
   const [hovered, sethovered] = useState(null);
   const icons = [
     { name: "GitHub", icon: github, color: "#181717", id: "Github" },
-    { name: "Calendar", icon: calender, color: "#FF3B30", id: "Calender" },
+    { name: "Calender", icon: calender, color: "#FF3B30", id: "Calender" },
     { name: "CLI", icon: cli, color: "#1C1C1E", id: "Terminal" },
     { name: "Notes", icon: note, color: "#FFCC00", id: "Note" },
     { name: "PDF", icon: pdf_file, color: "#FF3B30", id: "Resume" },

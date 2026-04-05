@@ -1,7 +1,7 @@
 import React from "react";
 import MacWindows from "./MacWindows";
 
-const Resume = ({ setwindowState }, activeWindow, setActiveWindow) => {
+const Resume = ({ setwindowState , activeWindow, setActiveWindow}) => {
   return (
     <MacWindows
       height={400}
@@ -16,16 +16,16 @@ const Resume = ({ setwindowState }, activeWindow, setActiveWindow) => {
         }))
       }
     >
-      <div className="h-screen w-''screen''">
-        {" "}
+      <div className="h-screen ">
+        
         <iframe
           className="h-full w-full"
           src="/TanveerAhmed.pdf"
-          frameborder="0"
+          frameBorder="0"
         >
-          {" "}
-        </iframe>{" "}
-      </div>{" "}
+          
+        </iframe>
+      </div>
     </MacWindows>
   );
 };

@@ -1,6 +1,6 @@
 import MacWindows from "./MacWindows";
 
-const Calendar = ({ setwindowState, activeWindow, setActiveWindow }) => {
+const Calender = ({ setwindowState, activeWindow, setActiveWindow }) => {
   return (
     <MacWindows
       height={400}
@@ -11,7 +11,7 @@ const Calendar = ({ setwindowState, activeWindow, setActiveWindow }) => {
       onClose={() =>
         setwindowState((prev) => ({
           ...prev,
-          Calendar: false,
+          Calender: false,
         }))
       }
     >
@@ -25,4 +25,4 @@ const Calendar = ({ setwindowState, activeWindow, setActiveWindow }) => {
   );
 };
 
-export default Calendar;
+export default Calender;
