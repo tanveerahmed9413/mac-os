@@ -51,11 +51,11 @@ const Terminal = ({ setwindowState, activeWindow, setActiveWindow }) => {
 Hey there! Welcome to my interactive terminal portfolio.
 
 You can explore:
-- about       → Learn about me \n
-- skills      → View my technical skills \n
-- projects    → Check out my work \n
-- experience  → See my journey \n
-- contact     → Get in touch \n
+- about       → Learn about me 
+- skills      → View my technical skills 
+- projects    → Check out my work 
+- experience  → See my journey 
+- contact     → Get in touch 
 
 Type "help" to see all available commands.
 
