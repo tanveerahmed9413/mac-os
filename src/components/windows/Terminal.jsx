@@ -59,7 +59,7 @@ You can explore:
 
 Type "help" to see all available commands.
 
-Happy exploring! 💻`}
+Happy exploring  💻`}
           prompt={"tanveerahmed:~$ "}
           showControlBar={false}
           showControlButtons={false}
